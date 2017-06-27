@@ -1,0 +1,141 @@
+@import "compass";
+@import url('https://fonts.googleapis.com/css?family=EB+Garamond');
+// font-family
+
+$baseFontFamily :"游ゴシック", YuGothic, "メイリオ",Verdana, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif ;
+$subFontFamily:'Quattrocento', serif;
+
+// colors
+$baseColor:#1C1C1C;
+$subColor: #24283A;
+$keyColor:#52D452;
+$fontColor: #FFF6F4;
+
+/* Base
+------------------------------------------------------------*/
+html{ font-size: 62.5%;
+      width:100%;
+ 
+}
+* {  text-decoration:none;
+     box-sizing:border-box;
+}
+
+body{
+  width:100%;
+  color: $fontColor;
+  font-size: 1.4rem;
+  font-family:$baseFontFamily;
+  line-height:1.6;
+  letter-spacing: 0.1em; 
+  background-color: $baseColor;
+}
+
+//header
+ header{
+     width:100%;
+     height:500px;
+     background-image:url(../image/Lotus01.png);
+     background-size:cover;
+     background-position:center 0;
+ }
+ 
+ main {
+     text-align:center;
+     
+     float:left;
+     :after {
+         content:"";
+         display:block;
+         clear:both;
+     }
+     h2 {
+         font-family:$subFontFamily;
+         color:$keyColor;
+         margin-top:40px;
+         font-size:6em;
+     }
+     .sections{
+         margin: 20px 0;
+         width:100%;
+         display: flex;
+         justify-content: center;
+         
+         
+         .section {
+          text-align:center;
+             display:block;
+             margin:0 20px;
+             width:25%;
+             background-color:$subColor;
+              display: flex;
+              flex-direction:column;
+             
+             h3 {
+                 font-size:1.2em;
+                 background-color:$subColor;
+                 width:100%;
+                 height:3em;
+                 line-height:3em;
+                 border-bottom:.5px solid $keyColor;
+             }
+             p {
+                 display:block;
+                 padding: 10%;
+                 margin: auto;
+                  display: flex;
+                  align-items: center;
+
+             }
+         }
+     }
+ }
+ 
+ @media (max-width:768px) {
+      main {
+       .sections {
+       
+        padding:5%;
+        flex-direction:column;
+         .section {
+          margin:10px 0;
+           width:100%;
+          }
+       }
+       
+      }
+       
+  
+ }
+ footer {
+     float:left;
+     width:100%;
+     margin-top:5%;
+     background-color:$subColor; 
+     text-align:center;
+     padding:2%;
+     
+     .btn {
+         font-family:$subFontFamily;
+         display:block;
+         margin:3px auto;
+         border-radius:6px;
+         background-color:$keyColor;
+         color:$fontColor;
+         width:25%;
+         line-height:3em;
+         height:3em;
+     }
+    
+ }
+ 
+ @media (max-width:768px) {
+      footer {
+       padding:5%;
+       .btn {
+        width:100%;
+        margin:3px auto;
+          }
+       }
+       
+      }
