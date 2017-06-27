@@ -26,6 +26,9 @@ header {
   background-size: cover;
   background-position: center 0; }
 
+@media (max-width: 768px) {
+  header {
+    height: 250px; } }
 main {
   text-align: center;
   float: left; }
